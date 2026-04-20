@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
-import crypto from 'crypto';
 
 export async function POST(req: Request) {
   try {
@@ -17,11 +16,11 @@ export async function POST(req: Request) {
       [data.email, data.document]
     ) as any[];
 
-    if (exists.length > 0) {
+    if (exists && exists.length > 0) {
        return NextResponse.json({ success: false, message: "E-mail ou Documento já cadastrado na base." }, { status: 409 });
     }
 
-    const newId = crypto.randomUUID();
+    const newId = 'CLI-' + Math.random().toString(36).substr(2, 9).toUpperCase();
 
     await query(`
       INSERT INTO clients (id, fullName, email, password, address, city, state, phone, document, status)
@@ -52,8 +51,8 @@ export async function POST(req: Request) {
     };
 
     return NextResponse.json({ success: true, client: newClient });
-  } catch (err) {
+  } catch (err: any) {
     console.error('Registration Error:', err);
-    return NextResponse.json({ success: false, message: "Erro interno." }, { status: 500 });
+    return NextResponse.json({ success: false, message: `Erro interno: ${err.message || String(err)}` }, { status: 500 });
   }
 }
