@@ -1,0 +1,655 @@
+{
+  "orders": [
+    {
+      "id": "732nmgy1p",
+      "items": [
+        {
+          "product": {
+            "id": "2",
+            "category": "banho",
+            "name": "Toalha de Banho Banhão Fio Penteado",
+            "description": "Toalha ultra absorvente e macia. Com sua gramatura superior, ela enxuga o corpo rapidamente com toque de pelúcia.",
+            "composition": "100% Algodão",
+            "variations": [
+              {
+                "color": "azul sereno",
+                "colorCode": "#E3F2FD",
+                "image": "https://images.unsplash.com/photo-1616627581519-798836ce22b2?auto=format&fit=crop&q=80&w=600"
+              },
+              {
+                "color": "coral",
+                "colorCode": "#F27474",
+                "image": "https://images.unsplash.com/photo-1584063851086-5d4c82c66cb1?auto=format&fit=crop&q=80&w=600"
+              }
+            ]
+          },
+          "selectedColor": "azul sereno",
+          "quantity": 1
+        }
+      ],
+      "status": "Aprovado",
+      "createdAt": "2026-04-01T14:45:30.906Z",
+      "totalItems": 1
+    },
+    {
+      "id": "w0oedanve",
+      "items": [
+        {
+          "product": {
+            "id": "2",
+            "category": "banho",
+            "name": "Toalha de Banho Banhão Fio Penteado",
+            "description": "Toalha ultra absorvente e macia. Com sua gramatura superior, ela enxuga o corpo rapidamente com toque de pelúcia.",
+            "composition": "100% Algodão",
+            "variations": [
+              {
+                "color": "azul sereno",
+                "colorCode": "#E3F2FD",
+                "image": "https://images.unsplash.com/photo-1616627581519-798836ce22b2?auto=format&fit=crop&q=80&w=600"
+              },
+              {
+                "color": "coral",
+                "colorCode": "#F27474",
+                "image": "https://images.unsplash.com/photo-1584063851086-5d4c82c66cb1?auto=format&fit=crop&q=80&w=600"
+              }
+            ]
+          },
+          "selectedColor": "azul sereno",
+          "quantity": 1
+        }
+      ],
+      "status": "Enviado",
+      "createdAt": "2026-04-01T17:10:34.972Z",
+      "totalItems": 1
+    },
+    {
+      "id": "fq93x385n",
+      "items": [
+        {
+          "product": {
+            "id": "bp2jaoaa7",
+            "name": "teste produto 01",
+            "category": "Cama",
+            "description": "descrição testes",
+            "composition": "algodão teste",
+            "stock": 50,
+            "videoUrl": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg",
+            "variations": [
+              {
+                "color": "azul",
+                "colorCode": "#343A40",
+                "image": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#343A40",
+                "image": "https://shopee.com.br/search?keyword=len%C3%A7ol"
+              }
+            ]
+          },
+          "selectedColor": "azul",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "kttfn9r1y",
+            "name": "KIT ALMOFADA CHEIA 4PCS",
+            "category": "Cama",
+            "description": "Confeccionado com suas estampas modernas e nas combinações no liso, todas com zíper e enchimento",
+            "composition": "Algodão",
+            "stock": 10,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "Vermelho",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA-1.jpg"
+              },
+              {
+                "color": "Azul",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA.jpg"
+              }
+            ],
+            "price": 182
+          },
+          "selectedColor": "Vermelho",
+          "quantity": 4
+        }
+      ],
+      "status": "Arquivado",
+      "createdAt": "2026-04-02T20:43:17.873Z",
+      "totalItems": 5
+    },
+    {
+      "id": "fy11nlyqk",
+      "items": [
+        {
+          "product": {
+            "id": "dbgogpm4q",
+            "name": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "category": "Decoração",
+            "description": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "composition": "Vidro",
+            "stock": 50,
+            "price": 42,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://jpenxovaisrota.com.br/medias/CONJUNTO-3-COPOS-ALTOS-260-ML.jpg"
+              }
+            ]
+          },
+          "selectedColor": "branco",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "4qj81214f",
+            "name": "LENÇOL CASAL MALHA 4 PEÇAS",
+            "category": "Cama",
+            "description": "Tecido malha fio 24 100% algodão\nMedida:\n\nVirol: 2,30 m x 2,30 m\nLençol: 1,38 m x 1,98 m\nFronha: 0,50 cm x 0,70 cm",
+            "composition": "algodão",
+            "stock": 24,
+            "price": 275,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "vermelho",
+                "colorCode": "#db0000",
+                "image": "https://jpenxovaisrota.com.br/medias/24.png"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://images.tcdn.com.br/img/img_prod/636855/kit_jogo_de_lencol_casal_188x138x30_cama_box_algodao_percal_attuale_16062_1_77e84d923c1e59b2a663240a5d459f0f.jpg"
+              },
+              {
+                "color": "azul",
+                "colorCode": "#0066cc",
+                "image": "https://images.yampi.me/assets/stores/bordabordados/uploads/images/lencol-casal-com-elastico-malha-100-algodao-01-peca-azul-claro-66143d26690f0-medium.jpg"
+              }
+            ]
+          },
+          "selectedColor": "vermelho",
+          "quantity": 1
+        }
+      ],
+      "status": "Arquivado",
+      "createdAt": "2026-04-02T21:30:01.188Z",
+      "totalItems": 2
+    },
+    {
+      "id": "5ot19kive",
+      "items": [
+        {
+          "product": {
+            "id": "dbgogpm4q",
+            "name": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "category": "Decoração",
+            "description": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "composition": "Vidro",
+            "stock": 50,
+            "price": 42,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://jpenxovaisrota.com.br/medias/CONJUNTO-3-COPOS-ALTOS-260-ML.jpg"
+              }
+            ]
+          },
+          "selectedColor": "branco",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "4qj81214f",
+            "name": "LENÇOL CASAL MALHA 4 PEÇAS",
+            "category": "Cama",
+            "description": "Tecido malha fio 24 100% algodão\nMedida:\n\nVirol: 2,30 m x 2,30 m\nLençol: 1,38 m x 1,98 m\nFronha: 0,50 cm x 0,70 cm",
+            "composition": "algodão",
+            "stock": 24,
+            "price": 275,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "vermelho",
+                "colorCode": "#db0000",
+                "image": "https://jpenxovaisrota.com.br/medias/24.png"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://images.tcdn.com.br/img/img_prod/636855/kit_jogo_de_lencol_casal_188x138x30_cama_box_algodao_percal_attuale_16062_1_77e84d923c1e59b2a663240a5d459f0f.jpg"
+              },
+              {
+                "color": "azul",
+                "colorCode": "#0066cc",
+                "image": "https://images.yampi.me/assets/stores/bordabordados/uploads/images/lencol-casal-com-elastico-malha-100-algodao-01-peca-azul-claro-66143d26690f0-medium.jpg"
+              }
+            ]
+          },
+          "selectedColor": "vermelho",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "bp2jaoaa7",
+            "name": "teste produto 01",
+            "category": "Cama",
+            "description": "descrição testes",
+            "composition": "algodão teste",
+            "stock": 50,
+            "videoUrl": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg",
+            "variations": [
+              {
+                "color": "azul",
+                "colorCode": "#343A40",
+                "image": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#343A40",
+                "image": "https://shopee.com.br/search?keyword=len%C3%A7ol"
+              }
+            ]
+          },
+          "selectedColor": "azul",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "kttfn9r1y",
+            "name": "KIT ALMOFADA CHEIA 4PCS",
+            "category": "Cama",
+            "description": "Confeccionado com suas estampas modernas e nas combinações no liso, todas com zíper e enchimento",
+            "composition": "Algodão",
+            "stock": 10,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "Vermelho",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA-1.jpg"
+              },
+              {
+                "color": "Azul",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA.jpg"
+              }
+            ],
+            "price": 182
+          },
+          "selectedColor": "Vermelho",
+          "quantity": 1
+        }
+      ],
+      "status": "Enviado",
+      "createdAt": "2026-04-02T22:12:34.981Z",
+      "totalItems": 4
+    },
+    {
+      "id": "20dvoy4u6",
+      "items": [
+        {
+          "product": {
+            "id": "kttfn9r1y",
+            "name": "KIT ALMOFADA CHEIA 4PCS",
+            "category": "Cama",
+            "description": "Confeccionado com suas estampas modernas e nas combinações no liso, todas com zíper e enchimento",
+            "composition": "Algodão",
+            "stock": 10,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "Vermelho",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA-1.jpg"
+              },
+              {
+                "color": "Azul",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA.jpg"
+              }
+            ],
+            "price": 182
+          },
+          "selectedColor": "Vermelho",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "4qj81214f",
+            "name": "LENÇOL CASAL MALHA 4 PEÇAS",
+            "category": "Cama",
+            "description": "Tecido malha fio 24 100% algodão\nMedida:\n\nVirol: 2,30 m x 2,30 m\nLençol: 1,38 m x 1,98 m\nFronha: 0,50 cm x 0,70 cm",
+            "composition": "algodão",
+            "stock": 24,
+            "price": 275,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "vermelho",
+                "colorCode": "#db0000",
+                "image": "https://jpenxovaisrota.com.br/medias/24.png"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://images.tcdn.com.br/img/img_prod/636855/kit_jogo_de_lencol_casal_188x138x30_cama_box_algodao_percal_attuale_16062_1_77e84d923c1e59b2a663240a5d459f0f.jpg"
+              },
+              {
+                "color": "azul",
+                "colorCode": "#0066cc",
+                "image": "https://images.yampi.me/assets/stores/bordabordados/uploads/images/lencol-casal-com-elastico-malha-100-algodao-01-peca-azul-claro-66143d26690f0-medium.jpg"
+              }
+            ]
+          },
+          "selectedColor": "vermelho",
+          "quantity": 1
+        }
+      ],
+      "status": "Pendente",
+      "createdAt": "2026-04-13T23:39:57.831Z",
+      "totalItems": 2
+    },
+    {
+      "id": "JPE-8QY0PV",
+      "clientName": "Thamires Lima Pereira",
+      "items": [
+        {
+          "product": {
+            "id": "dbgogpm4q",
+            "name": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "category": "Decoração",
+            "description": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "composition": "Vidro",
+            "stock": 50,
+            "price": 42,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://jpenxovaisrota.com.br/medias/CONJUNTO-3-COPOS-ALTOS-260-ML.jpg"
+              }
+            ]
+          },
+          "selectedColor": "branco",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "67q7bxq69",
+            "name": "Kit Cobre Leito Game Azul Dupla Face",
+            "category": "Cama",
+            "description": "A Nova Coleção Game Streamer em Microfibra tem um toque suave e macio, o tecido caracteriza-se por ser muito leve, confortável, sedoso, com secagem rápida e ótimo caimento. Vem trazendo estilo para a decoração de seu quarto na nova tendência Dupla Face, podendo utilizar as 2 cores do cobre leito! Ficará de ótimo bom gosto e elegância, acompanhando porta-travesseiros e duas almofadinhas estampadas super modernas e temáticas! Tudo para combinar com a decoração, perfeito para dar aquele upgrade no ambiente ou para presentear o Gamer que você ama! Confira!",
+            "composition": "100% Poliéster Microfibra",
+            "stock": 50,
+            "price": 45,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "AZUL",
+                "colorCode": "#343A40",
+                "image": "https://s1-unimed-dev.us-southeast-1.linodeobjects.com/images/products/seller_845/Kit-Cobre-Leito-Game-Streamer-Azul-Dupla-Face-c-Almofadas-CASAL-PADRAO-07-Pecas_a1592506-03e8-4b74-abf0-d557219d4035.webp",
+                "type": "pattern"
+              },
+              {
+                "type": "pattern",
+                "color": "PRETO",
+                "colorCode": "#343A40",
+                "patternImage": "",
+                "image": "https://s1-unimed-dev.us-southeast-1.linodeobjects.com/images/products/seller_845/Kit-Cobre-Leito-Game-Streamer-Azul-Dupla-Face-c-Almofadas-CASAL-PADRAO-07-Pecas_d980cddb-d038-4718-b7f2-3b924f342ef1.webp"
+              }
+            ]
+          },
+          "selectedColor": "AZUL",
+          "quantity": 1
+        }
+      ],
+      "status": "Pendente",
+      "createdAt": "2026-04-13T23:45:09.652Z",
+      "totalItems": 2
+    },
+    {
+      "id": "JPE-8SODB2",
+      "clientName": "Thamires Lima Pereira",
+      "items": [
+        {
+          "product": {
+            "id": "dbgogpm4q",
+            "name": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "category": "Decoração",
+            "description": "CONJUNTO 3 COPOS ALTOS 260ML",
+            "composition": "Vidro",
+            "stock": 50,
+            "price": 42,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://jpenxovaisrota.com.br/medias/CONJUNTO-3-COPOS-ALTOS-260-ML.jpg"
+              }
+            ]
+          },
+          "selectedColor": "branco",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "4qj81214f",
+            "name": "LENÇOL CASAL MALHA 4 PEÇAS",
+            "category": "Cama",
+            "description": "Tecido malha fio 24 100% algodão\nMedida:\n\nVirol: 2,30 m x 2,30 m\nLençol: 1,38 m x 1,98 m\nFronha: 0,50 cm x 0,70 cm",
+            "composition": "algodão",
+            "stock": 24,
+            "price": 275,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "vermelho",
+                "colorCode": "#db0000",
+                "image": "https://jpenxovaisrota.com.br/medias/24.png"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#ffffff",
+                "image": "https://images.tcdn.com.br/img/img_prod/636855/kit_jogo_de_lencol_casal_188x138x30_cama_box_algodao_percal_attuale_16062_1_77e84d923c1e59b2a663240a5d459f0f.jpg"
+              },
+              {
+                "color": "azul",
+                "colorCode": "#0066cc",
+                "image": "https://images.yampi.me/assets/stores/bordabordados/uploads/images/lencol-casal-com-elastico-malha-100-algodao-01-peca-azul-claro-66143d26690f0-medium.jpg"
+              }
+            ]
+          },
+          "selectedColor": "vermelho",
+          "quantity": 1
+        }
+      ],
+      "status": "Pendente",
+      "createdAt": "2026-04-13T23:53:02.444Z",
+      "totalItems": 2
+    },
+    {
+      "id": "JPE-4NQTP3",
+      "clientName": "Thamires Lima Pereira",
+      "items": [
+        {
+          "product": {
+            "id": "kttfn9r1y",
+            "name": "KIT ALMOFADA CHEIA 4PCS",
+            "category": "Cama",
+            "description": "Confeccionado com suas estampas modernas e nas combinações no liso, todas com zíper e enchimento",
+            "composition": "Algodão",
+            "stock": 10,
+            "videoUrl": "",
+            "variations": [
+              {
+                "color": "Vermelho",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA-1.jpg"
+              },
+              {
+                "color": "Azul",
+                "colorCode": "#343A40",
+                "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA.jpg"
+              }
+            ],
+            "price": 182
+          },
+          "selectedColor": "Vermelho",
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "bp2jaoaa7",
+            "name": "teste produto 01",
+            "category": "Cama",
+            "description": "descrição testes",
+            "composition": "algodão teste",
+            "stock": 50,
+            "videoUrl": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg",
+            "variations": [
+              {
+                "color": "azul",
+                "colorCode": "#343A40",
+                "image": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg"
+              },
+              {
+                "color": "branco",
+                "colorCode": "#343A40",
+                "image": "https://shopee.com.br/search?keyword=len%C3%A7ol"
+              }
+            ]
+          },
+          "selectedColor": "azul",
+          "quantity": 1
+        }
+      ],
+      "status": "Pendente",
+      "createdAt": "2026-04-14T17:43:09.125Z",
+      "totalItems": 2
+    }
+  ],
+  "products": [
+    {
+      "id": "bp2jaoaa7",
+      "name": "teste produto 01",
+      "category": "Cama",
+      "description": "descrição testes",
+      "composition": "algodão teste",
+      "stock": 50,
+      "videoUrl": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg",
+      "variations": [
+        {
+          "color": "azul",
+          "colorCode": "#343A40",
+          "image": "https://71765.cdn.simplo7.net/static/71765/sku/cama-jogo-de-lencol-cama-king-4-pecas-avere-micro-percal-200-fios-toque-macio-1726596936969.jpg"
+        },
+        {
+          "color": "branco",
+          "colorCode": "#343A40",
+          "image": "https://shopee.com.br/search?keyword=len%C3%A7ol"
+        }
+      ]
+    },
+    {
+      "id": "kttfn9r1y",
+      "name": "KIT ALMOFADA CHEIA 4PCS",
+      "category": "Cama",
+      "description": "Confeccionado com suas estampas modernas e nas combinações no liso, todas com zíper e enchimento",
+      "composition": "Algodão",
+      "stock": 10,
+      "videoUrl": "",
+      "variations": [
+        {
+          "color": "Vermelho",
+          "colorCode": "#343A40",
+          "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA-1.jpg"
+        },
+        {
+          "color": "Azul",
+          "colorCode": "#343A40",
+          "image": "https://jpenxovaisrota.com.br/medias/KIT-ALMOFADA.jpg"
+        }
+      ],
+      "price": 182
+    },
+    {
+      "id": "dbgogpm4q",
+      "name": "CONJUNTO 3 COPOS ALTOS 260ML",
+      "category": "Decoração",
+      "description": "CONJUNTO 3 COPOS ALTOS 260ML",
+      "composition": "Vidro",
+      "stock": 50,
+      "price": 42,
+      "videoUrl": "",
+      "variations": [
+        {
+          "color": "branco",
+          "colorCode": "#ffffff",
+          "image": "https://jpenxovaisrota.com.br/medias/CONJUNTO-3-COPOS-ALTOS-260-ML.jpg"
+        }
+      ]
+    },
+    {
+      "id": "4qj81214f",
+      "name": "LENÇOL CASAL MALHA 4 PEÇAS",
+      "category": "Cama",
+      "description": "Tecido malha fio 24 100% algodão\nMedida:\n\nVirol: 2,30 m x 2,30 m\nLençol: 1,38 m x 1,98 m\nFronha: 0,50 cm x 0,70 cm",
+      "composition": "algodão",
+      "stock": 24,
+      "price": 275,
+      "videoUrl": "",
+      "variations": [
+        {
+          "color": "vermelho",
+          "colorCode": "#db0000",
+          "image": "https://jpenxovaisrota.com.br/medias/24.png"
+        },
+        {
+          "color": "branco",
+          "colorCode": "#ffffff",
+          "image": "https://images.tcdn.com.br/img/img_prod/636855/kit_jogo_de_lencol_casal_188x138x30_cama_box_algodao_percal_attuale_16062_1_77e84d923c1e59b2a663240a5d459f0f.jpg"
+        },
+        {
+          "color": "azul",
+          "colorCode": "#0066cc",
+          "image": "https://images.yampi.me/assets/stores/bordabordados/uploads/images/lencol-casal-com-elastico-malha-100-algodao-01-peca-azul-claro-66143d26690f0-medium.jpg"
+        }
+      ]
+    },
+    {
+      "id": "67q7bxq69",
+      "name": "Kit Cobre Leito Game Azul Dupla Face",
+      "category": "Cama",
+      "description": "A Nova Coleção Game Streamer em Microfibra tem um toque suave e macio, o tecido caracteriza-se por ser muito leve, confortável, sedoso, com secagem rápida e ótimo caimento. Vem trazendo estilo para a decoração de seu quarto na nova tendência Dupla Face, podendo utilizar as 2 cores do cobre leito! Ficará de ótimo bom gosto e elegância, acompanhando porta-travesseiros e duas almofadinhas estampadas super modernas e temáticas! Tudo para combinar com a decoração, perfeito para dar aquele upgrade no ambiente ou para presentear o Gamer que você ama! Confira!",
+      "composition": "100% Poliéster Microfibra",
+      "stock": 50,
+      "price": 45,
+      "videoUrl": "",
+      "variations": [
+        {
+          "color": "AZUL",
+          "colorCode": "#343A40",
+          "image": "https://s1-unimed-dev.us-southeast-1.linodeobjects.com/images/products/seller_845/Kit-Cobre-Leito-Game-Streamer-Azul-Dupla-Face-c-Almofadas-CASAL-PADRAO-07-Pecas_a1592506-03e8-4b74-abf0-d557219d4035.webp",
+          "type": "pattern"
+        },
+        {
+          "type": "pattern",
+          "color": "PRETO",
+          "colorCode": "#343A40",
+          "patternImage": "",
+          "image": "https://s1-unimed-dev.us-southeast-1.linodeobjects.com/images/products/seller_845/Kit-Cobre-Leito-Game-Streamer-Azul-Dupla-Face-c-Almofadas-CASAL-PADRAO-07-Pecas_d980cddb-d038-4718-b7f2-3b924f342ef1.webp"
+        }
+      ]
+    }
+  ]
+}

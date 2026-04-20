@@ -1,0 +1,17 @@
+{
+  "clients": [
+    {
+      "id": "ef66ebc7-9567-4c78-9914-16eedc2b53be",
+      "fullName": "Thamires Lima Pereira",
+      "email": "teste@cliente.com.br",
+      "password": "Teste123",
+      "address": "Folha nova maraba",
+      "city": "Maraba",
+      "state": "Outros",
+      "phone": "94981993733",
+      "document": "00227858255",
+      "status": "approved",
+      "createdAt": "2026-04-13T23:34:02.098Z"
+    }
+  ]
+}
