@@ -30,7 +30,7 @@ export async function query(sql: string, values?: any[]) {
 
 export async function initDb() {
   // Criação da Tabela de Clientes
-  await query(`
+  await pool.execute(`
     CREATE TABLE IF NOT EXISTS clients (
       id VARCHAR(36) PRIMARY KEY,
       fullName VARCHAR(255) NOT NULL,
@@ -47,7 +47,7 @@ export async function initDb() {
   `);
 
   // Criação da Tabela de Pedidos
-  await query(`
+  await pool.execute(`
     CREATE TABLE IF NOT EXISTS orders (
       id VARCHAR(36) PRIMARY KEY,
       clientId VARCHAR(36) NULL,
@@ -61,7 +61,7 @@ export async function initDb() {
   `);
 
   // Criação da Tabela de Produtos
-  await query(`
+  await pool.execute(`
     CREATE TABLE IF NOT EXISTS products (
       id VARCHAR(36) PRIMARY KEY,
       data JSON NOT NULL
