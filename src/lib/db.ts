@@ -17,7 +17,13 @@ export const pool =
 
 if (process.env.NODE_ENV !== 'production') globalForMySQL.mysqlPool = pool;
 
+let isInitialized = false;
+
 export async function query(sql: string, values?: any[]) {
+  if (!isInitialized) {
+    await initDb();
+    isInitialized = true;
+  }
   const [rows] = await pool.execute(sql, values);
   return rows;
 }
