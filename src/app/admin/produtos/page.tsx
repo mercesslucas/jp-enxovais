@@ -5,12 +5,10 @@ import { useState, useEffect } from 'react';
 import { Product } from '@/store/useCartStore';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const CATEGORIES = ['Cama', 'Mesa', 'Banho', 'Decoração'];
-
 const INITIAL_FORM = {
   id: '',
   name: '',
-  category: 'Cama',
+  category: '',
   description: '',
   composition: '',
   stock: 0,
@@ -54,22 +52,35 @@ const compressImage = (file: File, maxWidth = 800): Promise<string> => {
 
 export default function AdminProducts() {
   const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<{id: string, name: string}[]>([]);
   const [formData, setFormData] = useState<any>(INITIAL_FORM);
   const [loading, setLoading] = useState(false);
   const [fetching, setFetching] = useState(true);
 
-  const fetchProducts = async () => {
+  const fetchData = async () => {
     setFetching(true);
     try {
-      const res = await fetch('/api/products');
-      const data = await res.json();
-      setProducts(data.products || []);
+      const [prodRes, catRes] = await Promise.all([
+        fetch('/api/products'),
+        fetch('/api/categories')
+      ]);
+      const prodData = await prodRes.json();
+      const catData = await catRes.json();
+      
+      setProducts(prodData.products || []);
+      const cats = catData.categories || [];
+      setCategories(cats);
+      
+      // Select first category if form is empty
+      if (cats.length > 0 && !formData.category && !formData.id) {
+        setFormData(prev => ({ ...prev, category: cats[0].name }));
+      }
     } catch(e) { console.error(e) }
     setFetching(false);
   };
 
   useEffect(() => {
-    fetchProducts();
+    fetchData();
   }, []);
 
   const handleAddVariation = () => {
@@ -113,7 +124,7 @@ export default function AdminProducts() {
 
       if (res.ok) {
         setFormData(INITIAL_FORM);
-        fetchProducts();
+        fetchData();
       } else {
         alert("Erro ao salvar produto. Verifique se o vídeo ou imagens são grandes demais (Max: ~4MB).");
       }
@@ -143,7 +154,7 @@ export default function AdminProducts() {
     if (confirm(`Tem certeza que deseja apagar o produto "${name}"?`)) {
       try {
         await fetch(`/api/products?id=${id}`, { method: 'DELETE' });
-        fetchProducts();
+        fetchData();
         if (formData.id === id) setFormData(INITIAL_FORM);
       } catch(e) {
         alert("Erro ao excluir.");
@@ -199,7 +210,7 @@ export default function AdminProducts() {
           <div>
             <label className="block text-sm font-bold text-premium-graphite mb-1.5">Setor</label>
             <select value={formData.category} onChange={(e) => setFormData({...formData, category: e.target.value})} className="w-full border border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-green/50 text-sm font-bold text-gray-600 bg-white">
-              {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+              {categories.map(c => <option key={c.id} value={c.name}>{c.name.toUpperCase()}</option>)}
             </select>
           </div>
 
@@ -352,12 +363,13 @@ export default function AdminProducts() {
           <div className="py-20 text-center text-gray-400 font-bold animate-pulse">Carregando Mídias...</div>
         ) : (
           <div className="flex flex-col gap-10 mt-8">
-            {CATEGORIES.map(sector => {
-              const itemsInSector = products.filter(p => p.category === sector);
+            {categories.map(cat => {
+              const sector = cat.name;
+              const itemsInSector = products.filter(p => p.category === sector || p.category === cat.name.toLowerCase());
               if (itemsInSector.length === 0) return null;
 
               return (
-                <div key={sector}>
+                <div key={cat.id}>
                   <div className="flex items-center gap-2 mb-4">
                     <div className="h-6 w-1.5 bg-brand-green rounded-full" />
                     <h3 className="text-xl font-bold text-premium-graphite uppercase tracking-tighter">Setor: {sector}</h3>

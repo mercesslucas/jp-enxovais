@@ -2,18 +2,15 @@ import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 import { MOCK_PRODUCTS } from '@/lib/data';
 
-async function ensureProducts() {
-   const count = await query('SELECT COUNT(*) as c FROM products') as any[];
-   if (count[0].c === 0) {
-      for (const p of MOCK_PRODUCTS) {
-         await query('INSERT INTO products (id, data) VALUES (?, ?)', [p.id, JSON.stringify(p)]);
-      }
-   }
+async function cleanupMocks() {
+  const ids = MOCK_PRODUCTS.map(p => p.id);
+  const placeholders = ids.map(() => '?').join(',');
+  await query(`DELETE FROM products WHERE id IN (${placeholders})`, ids);
 }
 
 export async function GET() {
   try {
-    await ensureProducts().catch(()=>null);
+    await cleanupMocks().catch(() => null);
     const rows = await query('SELECT data FROM products') as any[];
     const products = rows.map(r => typeof r.data === 'string' ? JSON.parse(r.data) : r.data);
     return NextResponse.json({ products });

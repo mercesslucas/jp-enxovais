@@ -67,4 +67,21 @@ export async function initDb() {
       data JSON NOT NULL
     )
   `);
+
+  // Criação da Tabela de Categorias
+  await pool.execute(`
+    CREATE TABLE IF NOT EXISTS categories (
+      id VARCHAR(36) PRIMARY KEY,
+      name VARCHAR(100) NOT NULL UNIQUE
+    )
+  `);
+
+  // Popular categorias iniciais se estiver vazio
+  const [catRows] = await pool.execute('SELECT COUNT(*) as count FROM categories') as any;
+  if (catRows[0].count === 0) {
+    const defaultCategories = ['cama', 'banho', 'mesa', 'decoração'];
+    for (const cat of defaultCategories) {
+      await pool.execute('INSERT INTO categories (id, name) VALUES (?, ?)', [Math.random().toString(36).substring(2, 9), cat]);
+    }
+  }
 }

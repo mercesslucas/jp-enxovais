@@ -1,6 +1,6 @@
 'use client';
 
-import { PackageSearch, ListTodo, LogOut, Settings, Users } from 'lucide-react';
+import { PackageSearch, ListTodo, LogOut, Settings, Users, Tags } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -40,6 +40,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           >
             <PackageSearch size={20} className="text-gray-400" />
             <span>Produtos</span>
+          </Link>
+          <Link 
+            href="/admin/categorias" 
+            className="flex items-center gap-2 p-3 rounded-xl hover:bg-gray-50 text-premium-graphite font-medium transition-colors flex-col md:flex-row text-xs md:text-sm"
+          >
+            <Tags size={20} className="text-gray-400" />
+            <span>Categorias</span>
           </Link>
           <Link 
             href="/admin/clientes" 

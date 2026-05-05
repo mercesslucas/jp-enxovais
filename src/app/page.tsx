@@ -9,7 +9,6 @@ import { ShoppingBag, Search, Menu, Loader2, X } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { Product } from '@/store/useCartStore';
 
-const CATEGORIES = ['Todos', 'Cama', 'Mesa', 'Banho', 'Decoração'];
 
 export default function Home() {
   const { items, openCart } = useCartStore();
@@ -17,6 +16,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [settings, setSettings] = useState({ heroImage: '/hero-bg.jpg' });
   const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<string[]>(['Todos']);
   const [loadingProducts, setLoadingProducts] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -28,16 +28,21 @@ export default function Home() {
     fetch('/api/settings')
       .then(res => res.json())
       .then(data => setSettings(data))
-      .catch(() => {});
-      
-    // Banco Oficial de Produtos
-    fetch('/api/products')
-      .then(res => res.json())
-      .then(data => {
-         setProducts(data.products || []);
-         setLoadingProducts(false);
-      })
-      .catch(() => setLoadingProducts(false));
+      .catch(() => { });
+
+    // Banco Oficial de Produtos e Categorias
+    Promise.all([
+      fetch('/api/products').then(res => res.json()),
+      fetch('/api/categories').then(res => res.json())
+    ])
+    .then(([prodData, catData]) => {
+      setProducts(prodData.products || []);
+      if (catData.categories) {
+        setCategories(['Todos', ...catData.categories.map((c: any) => c.name)]);
+      }
+      setLoadingProducts(false);
+    })
+    .catch(() => setLoadingProducts(false));
   }, []);
 
   useEffect(() => {
@@ -65,11 +70,11 @@ export default function Home() {
       {/* Fixed Header */}
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-30 px-4 py-3 sticky-header min-h-[60px] flex items-center">
         <div className="flex items-center justify-between mx-auto max-w-5xl w-full relative">
-          
+
           {/* Default Header Layout */}
           <div className={`flex items-center justify-between w-full transition-opacity duration-300 ${isSearchOpen ? 'opacity-0 pointer-events-none absolute' : 'opacity-100'}`}>
             <div className="flex items-center gap-3">
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(true)}
                 className="p-2 -ml-2 text-premium-graphite hover:bg-gray-100 rounded-full transition-colors"
                 aria-label="Abrir Menu"
@@ -78,16 +83,16 @@ export default function Home() {
               </button>
               <h1 className="text-xl font-black text-brand-green tracking-tight">JP <span className="text-premium-graphite">Enxovais</span></h1>
             </div>
-            
+
             <div className="flex items-center gap-2">
-              <button 
+              <button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-premium-graphite hover:bg-gray-50 rounded-full transition-colors"
                 aria-label="Buscar"
               >
                 <Search size={20} />
               </button>
-              <button 
+              <button
                 onClick={openCart}
                 className="relative p-2 text-premium-graphite hover:bg-gray-50 rounded-full transition-colors"
                 aria-label="Carrinho"
@@ -104,27 +109,27 @@ export default function Home() {
 
           {/* Search Header Layout */}
           <div className={`flex items-center w-full gap-2 transition-opacity duration-300 ${isSearchOpen ? 'opacity-100 relative' : 'opacity-0 pointer-events-none absolute'}`}>
-             <div className="relative flex-1">
-               <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-               <input 
-                 ref={searchInputRef}
-                 type="text" 
-                 value={searchQuery}
-                 onChange={(e) => setSearchQuery(e.target.value)}
-                 placeholder="Buscar lençóis, toalhas..." 
-                 className="w-full bg-gray-100/80 border border-gray-200 text-premium-graphite rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-brand-green/50 text-sm font-medium"
-               />
-             </div>
-             <button 
-               onClick={() => {
-                 setIsSearchOpen(false);
-                 setSearchQuery('');
-               }}
-               className="p-2 text-gray-500 hover:text-premium-graphite hover:bg-gray-100 rounded-full transition-colors"
-               aria-label="Fechar Busca"
-             >
-               <X size={20} />
-             </button>
+            <div className="relative flex-1">
+              <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                ref={searchInputRef}
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Buscar lençóis, toalhas..."
+                className="w-full bg-gray-100/80 border border-gray-200 text-premium-graphite rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-brand-green/50 text-sm font-medium"
+              />
+            </div>
+            <button
+              onClick={() => {
+                setIsSearchOpen(false);
+                setSearchQuery('');
+              }}
+              className="p-2 text-gray-500 hover:text-premium-graphite hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Fechar Busca"
+            >
+              <X size={20} />
+            </button>
           </div>
 
         </div>
@@ -133,16 +138,16 @@ export default function Home() {
       {/* Hero Image Banner */}
       <section className="relative w-full h-[40vh] md:h-[55vh] flex items-end justify-center overflow-hidden mt-[60px]">
         {/* Imagem de Fundo inserida baseada na Configuração Dinâmica */}
-        <div 
+        <div
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url('${settings.heroImage}')` }}
         />
-        
+
         {/* Degrade escuro (bottom-to-top) indo até a metade da imagem */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
         <div className="relative z-10 text-center px-4 pb-8 w-full flex flex-col items-center">
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
             className="bg-brand-green hover:bg-[#1ebd5b] text-white transition-colors px-10 py-3.5 rounded-2xl font-bold text-sm shadow-[0_4px_20px_rgba(50,176,85,0.4)] active:scale-95"
           >
@@ -154,15 +159,14 @@ export default function Home() {
       {/* Categories Scroll */}
       <div className="bg-white/80 backdrop-blur-sm sticky top-[60px] z-20 py-3 border-b border-gray-100">
         <div className="flex px-4 gap-3 overflow-x-auto no-scrollbar max-w-5xl mx-auto items-center snap-x">
-          {CATEGORIES.map(category => (
+          {categories.map(category => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`snap-start whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-semibold transition-all ${
-                activeCategory === category 
-                  ? 'bg-brand-green text-white shadow-md' 
+              className={`snap-start whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-semibold transition-all ${activeCategory === category
+                  ? 'bg-brand-green text-white shadow-md'
                   : 'bg-premium-offwhite text-gray-500 hover:bg-gray-200'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -195,11 +199,11 @@ export default function Home() {
 
         {!loadingProducts && filteredProducts.length > visibleCount && (
           <div className="flex justify-center mt-8 md:mt-10">
-            <button 
+            <button
               onClick={() => setVisibleCount(prev => prev + 10)}
               className="bg-white border-2 border-gray-100 hover:border-brand-green/30 hover:bg-brand-green/5 text-premium-graphite font-bold py-3 px-8 rounded-2xl transition-all shadow-sm active:scale-95"
             >
-              Exibir Mais Lençóis...
+              Exibir Mais Produtos...
             </button>
           </div>
         )}
