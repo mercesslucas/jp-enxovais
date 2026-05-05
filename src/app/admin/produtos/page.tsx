@@ -73,7 +73,7 @@ export default function AdminProducts() {
       
       // Select first category if form is empty
       if (cats.length > 0 && !formData.category && !formData.id) {
-        setFormData(prev => ({ ...prev, category: cats[0].name }));
+        setFormData((prev: any) => ({ ...prev, category: cats[0].name }));
       }
     } catch(e) { console.error(e) }
     setFetching(false);
