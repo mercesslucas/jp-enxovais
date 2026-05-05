@@ -203,7 +203,7 @@ export default function Home() {
               onClick={() => setVisibleCount(prev => prev + 10)}
               className="bg-white border-2 border-gray-100 hover:border-brand-green/30 hover:bg-brand-green/5 text-premium-graphite font-bold py-3 px-8 rounded-2xl transition-all shadow-sm active:scale-95"
             >
-              Exibir Mais Produtos...
+              Exibir Mais Produtos.
             </button>
           </div>
         )}
