@@ -162,6 +162,25 @@ export default function AdminProducts() {
     }
   };
 
+  const handleCleanMocks = async () => {
+    if (confirm("Tem certeza que deseja remover todos os produtos fictícios/órfãos que vieram com o sistema base?")) {
+      setLoading(true);
+      try {
+        const res = await fetch('/api/products/clean', { method: 'DELETE' });
+        const data = await res.json();
+        if (res.ok) {
+          alert(data.message || 'Produtos fictícios removidos com sucesso!');
+          fetchData();
+        } else {
+          alert('Erro ao limpar produtos.');
+        }
+      } catch (e) {
+        alert('Falha de conexão.');
+      }
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="w-full">
       <div className="flex items-center justify-between mb-8">
@@ -169,11 +188,16 @@ export default function AdminProducts() {
           <h1 className="text-2xl font-black text-premium-graphite">Gestão de Produtos</h1>
           <p className="text-gray-500 font-medium">Upload de mídia e cadastro de itens</p>
         </div>
-        {formData.id && (
-          <button onClick={() => setFormData(INITIAL_FORM)} className="text-brand-coral font-bold text-sm bg-brand-coral/10 px-4 py-2 rounded-xl">
-             Cancelar Edição
+        <div className="flex gap-2">
+          <button onClick={handleCleanMocks} disabled={loading} className="text-red-500 font-bold text-sm bg-red-50 px-4 py-2 rounded-xl hover:bg-red-100 transition-colors">
+            Limpar Produtos Fictícios
           </button>
-        )}
+          {formData.id && (
+            <button onClick={() => setFormData(INITIAL_FORM)} className="text-brand-coral font-bold text-sm bg-brand-coral/10 px-4 py-2 rounded-xl">
+               Cancelar Edição
+            </button>
+          )}
+        </div>
       </div>
 
       {products.filter(p => !p.stock || p.stock <= 0).length > 0 && (
